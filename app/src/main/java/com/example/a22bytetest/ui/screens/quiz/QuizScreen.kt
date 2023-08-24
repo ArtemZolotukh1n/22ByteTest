@@ -20,6 +20,11 @@ fun QuizScreen(
             modifier = Modifier.fillMaxSize()
         )
     } else {
-        MediumQuizScreen()
+        MediumQuizScreen(
+            navHostController = navHostController,
+            quizScreenViewModel = quizScreenViewModel,
+            modifier = Modifier.fillMaxSize(),
+            windowInfo = windowInfo
+        )
     }
 }
