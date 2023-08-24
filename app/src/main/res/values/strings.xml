@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">22ByteTest</string>
+    <string name="quiz_viewmodel_log_msg">Happened in QuizViewModel</string>
     <string name="start_button">Start</string>
+    <string name="alisa">ALICE was beginning to get very tired of\nsitting by her sister on the bank, and of having\nnothing to do</string>
+    <string name="a_street_cat_bob">It says we are all given second chances every day of our lives.</string>
+    <string name="bim"> Pitifully and, it seemed, hopelessly, he suddenly began to whine, awkwardly waddling back and forth - he was looking for his mother</string>
+    <string name="capital">The wealth of those societies in which the capitalist mode of production prevails, presents itself as “an immense accumulation of commodities,” its unit being a single commodity.</string>
+    <string name="fighting_club">TYLER GETS ME a job as a waiter, after that Tylers pushing a gun in my mouth and saying, the first step to eternal life is you have to die.</string>
+    <string name="first_teacher">I open the windows.</string>
+    <string name="harry_potter">Mr and Mrs Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal, thank you very much.</string>
+    <string name="it">The terror, which would not end for another twenty-eight years — if it ever did end — began, so far as I know or can tell, with a boat made from a sheet of newspaper floating down a gutter swollen with rain.</string>
+    <string name="snaff">Dude, dressed in nothing but boxers, stood at the buffet all day, licking the orange coating off barbecue-flavored potato chips.</string>
+    <string name="suffocation">If youre going to read this, dont.</string>
+    <string name="war_and_peace">Well, Prince, so Genoa and Lucca are now just family estates of the Buonapartes</string>
+    <string name="empire_v">When I came to, I found myself in a large room full of old furniture, antiques perhaps.</string>
+    <string name="doctor_zhivago">They walked and walked and sang “Eternal Memory”, and when they stopped, it seemed that their legs, horses, and breaths of the wind continued to sing it according to the routine.</string>
+    <string name="quiz_view_model">Viewmodel</string>
+    <string name="quiz_answer_variant">Quiz answer variant</string>
+    <string name="quiz_task">Can You Match the Book Cover to The Book\'s First Line?</string>
+    <string name="skip_question">Skip question, note that you can\'t return to it!</string>
+    <string name="final_score">Your score: %1$s/%2$s</string>
+    <string name="is_correct">Your answer is %1$s</string>
+
 </resources>
