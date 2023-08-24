@@ -19,6 +19,7 @@ import com.example.a22bytetest.R
 import com.example.a22bytetest.ui.navigation.Screen
 import com.example.a22bytetest.ui.screen_size.WindowInfo
 import com.example.a22bytetest.ui.screens.common.MediumTopPart
+import com.example.a22bytetest.ui.theme.StartButton
 
 @Composable
 fun MediumStartGameScreen(
@@ -57,7 +58,7 @@ fun MediumStartGameScreen(
                     .width(300.dp)
                     .height(65.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFFFD4D0A),
+                    containerColor = StartButton,
                     contentColor = MaterialTheme.colorScheme.onSurface,
                 ),
                 shape = MaterialTheme.shapes.large
