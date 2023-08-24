@@ -19,7 +19,7 @@ import com.example.a22bytetest.R
 import com.example.a22bytetest.ui.navigation.Screen
 
 @Composable
-fun SmallStartGameScreen(navHostController: NavHostController) {
+fun CompactStartGameScreen(navHostController: NavHostController) {
     Box(
         modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center
     ) {
