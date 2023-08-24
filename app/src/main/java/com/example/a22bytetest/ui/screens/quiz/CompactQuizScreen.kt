@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Card
@@ -42,52 +43,54 @@ fun CompactQuizScreen(
         navHostController.navigate(Screen.ResultScreen.route.plus("/${quizScreenViewModel.correctAnswersAmount}/${quizScreenViewModel.QUESTION_CAP}"))
     }
     Box(modifier = modifier) {
-        Column(
+        LazyColumn(
             modifier = modifier,
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = stringResource(R.string.quiz_task),
-                textAlign = TextAlign.Center,
-                style = MaterialTheme.typography.titleLarge
-            )
-            Spacer(modifier = Modifier.height(20.dp))
-            quizData.let { data ->
-                Box(
-                    modifier = Modifier
-                        .padding(horizontal = 12.dp, vertical = 12.dp)
-                        .fillMaxWidth()
-                        .background(QuestionBackground)
-                ) {
-                    Icon(
-                        imageVector = ImageVector.vectorResource(R.drawable.stars),
-                        contentDescription = null,
-                        tint = QuestionTextColor,
+            item {
+                Text(
+                    text = stringResource(R.string.quiz_task),
+                    textAlign = TextAlign.Center,
+                    style = MaterialTheme.typography.titleLarge
+                )
+            }
+            item {
+                quizData.let { data ->
+                    Box(
                         modifier = Modifier
-                            .align(Alignment.TopEnd)
-                            .padding(12.dp),
-                    )
-                    Text(
-                        text = "“".plus(stringResource(id = quizData.quizData!!.sentence))
-                            .plus("”"),
-                        modifier = Modifier
-                            .padding(horizontal = 32.dp, vertical = 64.dp),
-                        textAlign = TextAlign.Center,
-                        style = MaterialTheme.typography.bodyMedium,
-                        lineHeight = 30.sp
-                    )
-                }
-
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    data.quizData!!.options.forEach { imageId ->
-                        QuizCard(imageId = imageId) {
-                            quizScreenViewModel.playerAnswer(imageId == quizData.quizData!!.correctImageIndex)
+                            .padding(horizontal = 12.dp, vertical = 12.dp)
+                            .fillMaxWidth()
+                            .background(QuestionBackground)
+                    ) {
+                        Icon(
+                            imageVector = ImageVector.vectorResource(R.drawable.stars),
+                            contentDescription = null,
+                            tint = QuestionTextColor,
+                            modifier = Modifier
+                                .align(Alignment.TopEnd)
+                                .padding(12.dp),
+                        )
+                        Text(
+                            text = "“".plus(stringResource(id = quizData.quizData!!.sentence))
+                                .plus("”"),
+                            modifier = Modifier
+                                .padding(horizontal = 32.dp, vertical = 64.dp),
+                            textAlign = TextAlign.Center,
+                            style = MaterialTheme.typography.bodyMedium,
+                            lineHeight = 30.sp
+                        )
+                    }
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        data.quizData!!.options.forEach { imageId ->
+                            CompactQuizCard(imageId = imageId) {
+                                quizScreenViewModel.playerAnswer(imageId == quizData.quizData!!.correctImageIndex)
+                            }
+                            Spacer(modifier = Modifier.width(8.dp))
                         }
-                        Spacer(modifier = Modifier.width(8.dp))
                     }
                 }
             }
@@ -108,7 +111,7 @@ fun CompactQuizScreen(
 }
 
 @Composable
-fun QuizCard(
+fun CompactQuizCard(
     imageId: Int,
     onClick: () -> Unit
 ) {

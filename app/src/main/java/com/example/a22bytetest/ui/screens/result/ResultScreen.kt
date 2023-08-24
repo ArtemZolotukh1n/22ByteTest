@@ -22,7 +22,7 @@ fun ResultScreen(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.padding(start = 12.dp),
+        modifier = modifier.padding(start = 12.dp, top = 8.dp),
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.Center
     ) {

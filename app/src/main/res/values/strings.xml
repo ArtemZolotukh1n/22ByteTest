@@ -21,5 +21,7 @@
     <string name="skip_question">Skip question, note that you can\'t return to it!</string>
     <string name="final_score">Your score: %1$s/%2$s</string>
     <string name="is_correct">Your answer is %1$s</string>
+    <string name="play">PLAY</string>
+    <string name="game_rules">MATCH THE COVER OF THE BOOK WITH ITS FIRST LINE</string>
 
 </resources>

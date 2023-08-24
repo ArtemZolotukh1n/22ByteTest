@@ -19,7 +19,7 @@ import javax.inject.Inject
 import javax.inject.Provider
 
 class QuizScreenViewModel @Inject constructor(
-    private val application: Application,
+    application: Application,
     private val quizScreenRepo: QuizScreenRepo
 ) : ViewModel() {
 
@@ -61,8 +61,8 @@ class QuizScreenViewModel @Inject constructor(
 
         if (isCorrect) {
             correctAnswersAmount++
-            removeImageFromImagePool(_uiState.value.quizData!!.correctImageIndex)
         }
+        removeImageFromImagePool(_uiState.value.quizData!!.correctImageIndex)
         fetchNewQuestion()
         _uiState.update {
             it.copy(
